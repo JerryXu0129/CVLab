@@ -1,0 +1,165 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>SIGS CV LAB</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="CV & ML Lab" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link href="../css/single.css" rel='stylesheet' type='text/css' />
+	<!-- single page -->
+	<link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/timelines.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Overlock:400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+	<style type="text/css">
+	p{
+		color:black;
+	}
+	</style>
+
+</head>
+
+<body>
+	<!-- main banner -->
+	<div class="main-top-2" id="home">
+		<!-- header -->
+		<header>
+			<div class="container-fluid">
+				<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
+					<!-- logo -->
+					<div id="logo">
+						<h1><a href="index.html">SIGS CV LAB-paper</a></h1>
+					</div>
+					<!-- //logo -->
+					<!-- nav -->
+					<div class="nav_w3ls">
+						<nav>
+							<label for="drop" class="toggle">Menu</label>
+							<input type="checkbox" id="drop" />
+							<ul class="menu">
+								<li><a href="../index.html" class="active">Home</a></li>
+								<li><a href="../professor.html">Professor</a></li>
+								<li><a href="../research.html">Research</a></li>
+								<li><a href="../teammates.html">Teammates</a></li>
+								<li><a href="../courses.html">Courses</a></li>
+								<li><a href="../contact.html">Contact Us</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- //nav -->
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+	</div>
+	<!-- //main banner -->
+	<!-- page details -->
+
+	<!-- <div class="breadcrumb-w3pvt">
+		<ol class="breadcrumb mb-0 text-center">
+			<li class="breadcrumb-item">
+				<a href="index.html">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">Professor</li>
+		</ol>
+	</div> -->
+	<!-- //page details -->
+
+
+
+	<div class="what py-5" >
+		<div class="container py-xl-5 py-lg-3">
+			<h3 class="title text-center text-bl mb-lg-4 mb-3">Self-Attention ConvLSTM for Spatiotemporal Prediction</h3>
+			<h5 class="title text-center text-bl mb-lg-4 mb-3">Zhihui Lin, Maomao Li, Zhuobin Zheng, Yangyang Cheng, Chun Yuan</h5>
+
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<center><img src="../images/research/paper3/1.png" alt="" style="width:80%;"></center>
+
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+	</div>
+
+
+	<hr>
+
+	<!-- About Dr. Chun yuan -->
+	<div class="blog-w3l py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="blog_section px-lg-5">
+				<!-- About Video Object Tracking -->
+				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Abstract</a>
+				<div style="font-family:Arial; ">
+					<p>Spatiotemporal prediction is challenging due to the complex dynamic motion and appearance changes. Existing work concentrates on embedding additional cells into the standard ConvLSTM to memorize spatial appearances during the prediction. These models always rely on the convolution layers to capture the spatial dependence, which are local and inefﬁcient. However, long-range spatial dependencies are significant for spatial applications. To extract spatial features with both global and local dependencies, we introduce the selfattention mechanism into ConvLSTM. Speciﬁcally, a novel self-attention memory (SAM) is proposed to memorize features with long-range dependencies in terms of spatial and temporal domains. Based on the self-attention, SAM can produce features by aggregating features across all positions of both the input itself and memory features with pair-wise similarity scores. Moreover, the additional memory is updated by a gating mechanism on aggregated features and an established highway with the memory of the previous time step. Therefore, through SAM, we can extract features with long-range spatiotemporal dependencies. Furthermore, we embed the SAM into a standard ConvLSTM to construct a selfattention ConvLSTM (SA-ConvLSTM) for the spatiotemporal prediction. In experiments, we apply the SA-ConvLSTM to perform frame prediction on the MovingMNIST and KTH datasets and trafﬁc ﬂow prediction on the TexiBJ dataset. Our SA-ConvLSTM achieves state-of-the-art results on both datasets with fewer parameters and higher time efﬁciency than previous state-of-the-art method.</p>
+				</div>
+				<br><br>
+
+				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">System structure</a>
+				<div class="">
+					<center><img src="../images/research/paper3/2.png" alt="" style="width:100%;"></center>
+				</div>
+				<br><br>
+
+				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Performance</a>
+				<div class="">
+					<center><img src="../images/research/paper3/3.png" alt="" style="width:80%;"></center>
+				</div>
+				<br><br>
+
+				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Paper Link</a>
+					<span> <p><a href="#">arXiv</a></p>     <p><a href="#">Github</a></p></span>
+			</div>
+		</div>
+	</div>
+	<!-- //About Dr. Chun Yuan -->
+
+
+
+	<!-- copyright -->
+	<div class="copy_right">
+		<p class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
+	</div>
+	<!-- //copyright -->
+	<!-- move top icon -->
+	<a href="#home" class="move-top text-center"></a>
+	<!-- //move top icon -->
+
+</body>
+
+</html>
