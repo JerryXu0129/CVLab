@@ -8,6 +8,62 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 
+<script src='./js/language.js'></script>
+<script>
+	function changeContent(){
+		title=document.getElementById("title")
+		content1=document.getElementById("content1")
+		content2=document.getElementById("content2")
+		research1=document.getElementById("research1")
+		research2=document.getElementById("research2")
+		research3=document.getElementById("research3")
+		research4=document.getElementById("research4")
+		research5=document.getElementById("research5")
+		research6=document.getElementById("research6")
+		research1_=document.getElementById("research1_")
+		research2_=document.getElementById("research2_")
+		research3_=document.getElementById("research3_")
+		research4_=document.getElementById("research4_")
+		research5_=document.getElementById("research5_")
+		research6_=document.getElementById("research6_")
+		if (title.innerHTML.match('深圳')){
+			content1.innerHTML="研究方向"
+			content2.innerHTML="下面的论文将阐述我们具体做些什么内容。如果您感兴趣，请点击相应的论文了解更多细节。"
+			research1.innerHTML="视频目标检测"
+			research2.innerHTML="生成模型"
+			research3.innerHTML="视频与图像理解"
+			research4.innerHTML="目标分割"
+			research5.innerHTML="图像分类"
+			research6.innerHTML="强化学习"
+			research1_.innerHTML="视频目标检测"
+			research2_.innerHTML="生成模型"
+			research3_.innerHTML="视频与图像理解"
+			research4_.innerHTML="目标分割"
+			research5_.innerHTML="图像分类"
+			research6_.innerHTML="强化学习"
+			copyright.innerHTML="© 2020. 版权所有 | 由 Benjamin Zhang 设计"
+		}
+		else if(title.innerHTML.match('SIGS')){
+			content1.innerHTML="Research Interests"
+			content2.innerHTML="The following papers will illustrate what exatly we do.If you are interested, please click the corresponded paper to learn more details."
+			research1.innerHTML="Video Object Tracking"
+			research2.innerHTML="Generative Model"
+			research3.innerHTML="Video and image understanding"
+			research4.innerHTML="Object segmentation"
+			research5.innerHTML="Image Classification"
+			research6.innerHTML="Reinforcement learning"
+			research1_.innerHTML="Video Object Tracking"
+			research2_.innerHTML="Generative Model"
+			research3_.innerHTML="Video and image understanding"
+			research4_.innerHTML="Object segmentation"
+			research5_.innerHTML="Image Classification"
+			research6_.innerHTML="Reinforcement learning"
+			copyright.innerHTML="© 2020. All rights reserved | Designed by Benjamin Zhang."
+		}
+	}
+
+</script> 
+
 <head>
 	<title>SIGS CV LAB</title>
 	<!-- Meta tag Keywords -->
@@ -60,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
 					<!-- logo -->
 					<div id="logo">
-						<h1><a href="index.html">SIGS CV LAB</a></h1>
+						<h1><a id="title" href="index.html" style="font-size: 50px;">SIGS CV & ML LAB</a></h1>
 					</div>
 					<!-- //logo -->
 					<!-- nav -->
@@ -69,12 +125,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="./professor.html">Professor</a></li>
-								<li><a href="./research.html">Research</a></li>
-								<li><a href="./teammates.html">Teammates</a></li>
-								<li><a href="./courses.html">Courses</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a onclick="setCookie()" id="Home" href="index.html">Home</a></li>
+								<li><a onclick="setCookie()" id="Professor" href="./professor.html">Professor</a></li>
+								<li><a onclick="setCookie()" id="Research" href="./research.html" class="active">Research</a></li>
+								<li><a onclick="setCookie()" id="Members" href="./members.html">Members</a></li>
+								<li><a onclick="setCookie()" id="Courses" href="./courses.html">Courses</a></li>
+								<li><a onclick="setCookie()" id="Contact" href="contact.html">Contact Us</a></li>
+								<li><button id="Language" type="button" onclick="changeLanguage()">中文</button></li>
 							</ul>
 						</nav>
 					</div>
@@ -101,27 +158,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<div class="what py-5" >
 		<div class="container py-xl-5 py-lg-3">
-			<h3 class="title text-center text-bl mb-lg-4 mb-3">Research Interests</h3>
-			<p class="text-sty-banner pb-xl-3 mb-5" style="color:black;">The following papers will illustrate what exatly we do.If you are interested, please click the corresponded paper to learn more details.</p>
+			<h3 id="content1" class="title text-center text-bl mb-lg-4 mb-3">Research Interests</h3>
+			<p id="content2" class="text-sty-banner pb-xl-3 mb-5" style="color:black;">The following papers will illustrate what exatly we do.If you are interested, please click the corresponded paper to learn more details.</p>
 			<div class="row about-bottom-w3l text-center mt-4">
 
 				<div class="col-lg-4 about-grid">
 					<div class="about-grid-main">
-						<img src="./images/research/r1.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Video Object Tracking</h4>
+						<img src="./information/research/r1.jpg" alt="" class="img-fluid">
+						<h4 id="research1" class="mt-4 mb-3">Video Object Tracking</h4>
 						<!-- <p>Video Object Trackin</p> -->
 					</div>
 				</div>
 				<div class="col-lg-4 about-grid my-lg-0 my-5">
 					<div class="about-grid-main">
-						<img src="./images/research/r2.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Generative Model</h4>
+						<img src="./information/research/r2.jpg" alt="" class="img-fluid">
+						<h4 id="research2" class="mt-4 mb-3">Generative Model</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 about-grid">
 					<div class="about-grid-main">
-						<img src="./images/research/r3.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Video and image understanding</h4>
+						<img src="./information/research/r3.jpg" alt="" class="img-fluid">
+						<h4 id="research3" class="mt-4 mb-3">Video and image understanding</h4>
 					</div>
 				</div>
 			</div>
@@ -129,21 +186,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="row about-bottom-w3l text-center mt-4">
 				<div class="col-lg-4 about-grid">
 					<div class="about-grid-main">
-						<img src="./images/research/r4.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Object segmentation</h4>
+						<img src="./information/research/r4.jpg" alt="" class="img-fluid">
+						<h4 id="research4" class="mt-4 mb-3">Object segmentation</h4>
 						<!-- <p>Video Object Trackin</p> -->
 					</div>
 				</div>
 				<div class="col-lg-4 about-grid my-lg-0 my-5">
 					<div class="about-grid-main">
-						<img src="./images/research/r5.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Image Classification</h4>
+						<img src="./information/research/r5.jpg" alt="" class="img-fluid">
+						<h4 id="research5" class="mt-4 mb-3">Image Classification</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 about-grid">
 					<div class="about-grid-main">
-						<img src="./images/research/r6.jpg" alt="" class="img-fluid">
-						<h4 class="mt-4 mb-3">Reinforcement learning</h4>
+						<img src="./information/research/r6.jpg" alt="" class="img-fluid">
+						<h4 id="research6" class="mt-4 mb-3">Reinforcement learning</h4>
 					</div>
 				</div>
 				<!-- <div class="col-lg-4 about-grid my-lg-0 my-5">
@@ -177,10 +234,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-5 py-lg-3">
 			<div class="blog_section px-lg-5">
 				<!-- About Video Object Tracking -->
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Video Object Tracking</a>
-				<div style="font:Arial">
+				<a id="research1_"  href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Video Object Tracking</a>
+				<div style="font-family:courier ; ">
 					<ol style="margin-left:32px;">
-						<li><a href="./paper_html/paper1.html" target="_blank">Qiurui Wang, Chun Yuan, Jingdong Wang, Wenjun Zeng, Learning Attentional Recurrent Neural Network for Visual Tracking. IEEE Transactions on Multimedia, 2018 (CCF B)</a></li>
+						<li><a onclick="setCookie()" href="./paper_html/paper1.html">Qiurui Wang, Chun Yuan, Jingdong Wang, Wenjun Zeng, Learning Attentional Recurrent Neural Network for Visual Tracking. IEEE Transactions on Multimedia, 2018 (CCF B)</a></li>
 						<li>Zhiguan Lin, Chun Yuan, Robust Visual Tracking in Low-Resolution Sequence. IEEE International Conference on Image Processing ICIP 2018( CCF C)</li>
 					</ol>
 				</div>
@@ -188,13 +245,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- End of Video Object Tracking -->
 				
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Video and image understanding</a>
+				<a id="research2_" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Video and image understanding</a>
 				<div style="font-family:courier ; ">
 					<ol style="margin-left:32px;">
-						<li><a href="./paper_html/paper5.html" target="_blank">JiayinCai, Chun Yuan, Cheng Shi, Lei Li, Yangyang Cheng, and Ying Shan, Feature Augmented Memory with Global Attention Network for VideoQA, IJCAI 2020 (CCF A)  <span style="color: red;"><b>new!</b></span>  </a> </li>
-						<li><a href="./paper_html/paper4.html" target="_blank">Zhihui Lin, Chun Yuan, and Maomao Li, HAF-SVG: Hierarchical Stochastic Video Generation with Aligned Features, IJCAI 2020 (CCF A) <span style="color: red;"><b>new!</b></span> </a> </li>
+						<li><a onclick="setCookie()" href="./paper_html/paper5.html">JiayinCai, Chun Yuan, Cheng Shi, Lei Li, Yangyang Cheng, and Ying Shan, Feature Augmented Memory with Global Attention Network for VideoQA, IJCAI 2020 (CCF A)  <span style="color: red;"><b>new!</b></span>  </a> </li>
+						<li><a onclick="setCookie()" href="./paper_html/paper4.html">Zhihui Lin, Chun Yuan, and Maomao Li, HAF-SVG: Hierarchical Stochastic Video Generation with Aligned Features, IJCAI 2020 (CCF A) <span style="color: red;"><b>new!</b></span> </a> </li>
 
-						<li><a href="./paper_html/paper3.html" target="_blank">Zhihui Lin, Maomao Li, Zhuobin Zheng, Yangyang Cheng, Chun Yuan, Self-Attention ConvLSTM for Spatiotemporal Prediction, AAAI 2020 (CCF A) <span style="color: red;"><b>new!</b></span> </a> </li>
+						<li><a onclick="setCookie()" href="./paper_html/paper3.html">Zhihui Lin, Maomao Li, Zhuobin Zheng, Yangyang Cheng, Chun Yuan, Self-Attention ConvLSTM for Spatiotemporal Prediction, AAAI 2020 (CCF A) <span style="color: red;"><b>new!</b></span> </a> </li>
 						<li>Zhiming Ma, Chun Yuan, Image-to-Tree: A Tree-structured Decoder for Image Captioning, ICME 2019 (CCF B)</li>
 						<li>Zhou Cheng, Chun Yuan, Jiancheng Li, Haiqin Yuang,  TreeNet: Learning sentence representations with unconstrained tree structure, IJCAI 2018 (CCF A)</li>
 						<li>Dali Yang, Chun Yuan. Hierarchical Context Encoder for Events Captioning in Videos, IEEE International Conference on Image Processing, ICIP2018 (CCF C) </li>
@@ -203,10 +260,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<br><br>
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Image Classification</a>
+				<a id="research3_"  href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Image Classification</a>
 				<div style="font-family:courier ; ">
 					<ol style="margin-left:32px;">
-						<li><a href="./paper_html/paper2.html" target="_blank"> Yuwei Zhang, Peng Zhang, Chun Yuan, and Zhi Wang, Texture and Shape biased Two-Stream Networks for Clothing Classiﬁcation and Attribute Recognition, CVPR 2020 (CCF A) <span style="color: red;"><b>new!</b></span>  </a></li>
+						<li><a onclick="setCookie()" href="./paper_html/paper2.html"> Yuwei Zhang, Peng Zhang, Chun Yuan, and Zhi Wang, Texture and Shape biased Two-Stream Networks for Clothing Classiﬁcation and Attribute Recognition, CVPR 2020 (CCF A) <span style="color: red;"><b>new!</b></span>  </a></li>
 						<li>Lishu Luo, Chun Yuan, Ke Zhang, Double Shot: Preserve and Erase Based Class Attention Networks for Weakly Supervised Localization, ICME 2020 (CCF B) <span style="color: red;"><b>new!</b></span> </li>
 						<li>Yuwu Lu, Chun Yuan, Wenwu Zhu, Xuenong Li, Structurally Incoherent Low-Rank Nonnegative Matrix Factorization for Image Classification, Transaction on Image Processing, 2018 (CCF A)</li>
 						<li>Yuwu Lu, Chun Yuan, Xuenong Li, Zhihui Lai, David Zhang, Structurally Incoherent Low-Rank 2DLPP for Image Classification, IEEE Transactions on Circuits and Systems for Video Technology, 2018(CCF B)</li>
@@ -216,7 +273,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<br><br>
 
 				<!-- About Generative Model -->
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Generative Model</a>
+				<a id="research4_"  href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Generative Model</a>
 				<div style="font-family:courier ; ">
 					<ol style="margin-left:32px;">
 						<li>Youcheng Ben, Chun Yuan, Densely stacked generative adversarial networks, ICME 2018 (CCF B)
@@ -227,7 +284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<br><br>
 				<!-- End of Generative Model -->
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Object segmentation </a>
+				<a id="research5_"  href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Object segmentation </a>
 				<div style="font-family:courier ; ">
 					<ol style="margin-left:28px;">
 						<li>Zhou Cheng, Jiancheng Li, Chun Yuan, GATE FUNCTION BASED STRUCTURE-AWARE CONVOLUTION  FOR SCENE SEMANTIC  SEGMANTATION, ICME2017</li>
@@ -235,7 +292,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<br><br>
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Reinforcement learning</a>
+				<a id="research6_" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Reinforcement learning</a>
 				<div style="font-family:courier ; ">
 					<ol style="margin-left:32px;">
 						<li>Zhuobin Zheng, Chun Yuan, Zhihui Lin, Yangyang Cheng, Hanghao Wu, Self-Adaptive Double bootstrapped DDPG，IJCAI 2018 (CCF A)</li>
@@ -255,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- copyright -->
 	<div class="copy_right">
-		<p class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
+		<p id="copyright" class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
 	</div>
 	<!-- //copyright -->
 	<!-- move top icon -->
@@ -263,5 +320,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //move top icon -->
 
 </body>
+
+<script>
+    getCookie()
+</script>
 
 </html>

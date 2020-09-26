@@ -8,6 +8,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 
+<script src='../js/language.js'></script>
+<script>
+	function changeContent(){
+		title=document.getElementById("title" )
+		Abstract=document.getElementById("Abstract")
+		System=document.getElementById("System")
+		performance=document.getElementById("Performance")
+		Paper=document.getElementById("Paper")
+		if (title.innerHTML.match('深圳')){
+			Abstract.innerHTML="摘要"
+			System.innerHTML="编码结构"
+			performance.innerHTML="性能"
+			Paper.innerHTML="论文链接"
+		}
+		else if(title.innerHTML.match('SIGS')){
+			Abstract.innerHTML="Abstract"
+			System.innerHTML="System structure"
+			performance.innerHTML="Performance"
+			Paper.innerHTML="Paper link"
+		}
+	}
+
+</script> 
+
 <head>
 	<title>SIGS CV LAB</title>
 	<!-- Meta tag Keywords -->
@@ -60,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
 					<!-- logo -->
 					<div id="logo">
-						<h1><a href="index.html">SIGS CV LAB-paper</a></h1>
+						<h1><a id="title" href="../index.html">SIGS CV & ML LAB-paper</a></h1>
 					</div>
 					<!-- //logo -->
 					<!-- nav -->
@@ -69,12 +93,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="../index.html" class="active">Home</a></li>
-								<li><a href="../professor.html">Professor</a></li>
-								<li><a href="../research.html">Research</a></li>
-								<li><a href="../teammates.html">Teammates</a></li>
-								<li><a href="../courses.html">Courses</a></li>
-								<li><a href="../contact.html">Contact Us</a></li>
+								<li><a onclick="setCookie()" id="Home" href="../index.html">Home</a></li>
+								<li><a onclick="setCookie()" id="Professor" href="../professor.html">Professor</a></li>
+								<li><a onclick="setCookie()" id="Research" href="../research.html" class="active">Research</a></li>
+								<li><a onclick="setCookie()" id="Members" href="../members.html">Members</a></li>
+								<li><a onclick="setCookie()" id="Courses" href="../courses.html">Courses</a></li>
+								<li><a onclick="setCookie()" id="Contact" href="../contact.html">Contact Us</a></li>
+								<li><button id="Language" type="button" onclick="changeLanguage()">中文</button></li>
 							</ul>
 						</nav>
 					</div>
@@ -109,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="row">
 			<div class="col-lg-2"></div>
 			<div class="col-lg-8">
-				<center><img src="../images/research/paper4/1.png" alt="" style="width:80%;"></center>
+				<center><img src="../information/research/paper4/1.png" alt="" style="width:80%;"></center>
 
 			</div>
 			<div class="col-lg-2"></div>
@@ -124,25 +149,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-5 py-lg-3">
 			<div class="blog_section px-lg-5">
 				<!-- About Video Object Tracking -->
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Abstract</a>
+				<a id="Abstract" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Abstract</a>
 				<div style="font-family:Arial; ">
 					<p>Spatiotemporal prediction is challenging due to the complex dynamic motion and appearance changes. Existing work concentrates on embedding additional cells into the standard ConvLSTM to memorize spatial appearances during the prediction. These models always rely on the convolution layers to capture the spatial dependence, which are local and inefﬁcient. However, long-range spatial dependencies are significant for spatial applications. To extract spatial features with both global and local dependencies, we introduce the selfattention mechanism into ConvLSTM. Speciﬁcally, a novel self-attention memory (SAM) is proposed to memorize features with long-range dependencies in terms of spatial and temporal domains. Based on the self-attention, SAM can produce features by aggregating features across all positions of both the input itself and memory features with pair-wise similarity scores. Moreover, the additional memory is updated by a gating mechanism on aggregated features and an established highway with the memory of the previous time step. Therefore, through SAM, we can extract features with long-range spatiotemporal dependencies. Furthermore, we embed the SAM into a standard ConvLSTM to construct a selfattention ConvLSTM (SA-ConvLSTM) for the spatiotemporal prediction. In experiments, we apply the SA-ConvLSTM to perform frame prediction on the MovingMNIST and KTH datasets and trafﬁc ﬂow prediction on the TexiBJ dataset. Our SA-ConvLSTM achieves state-of-the-art results on both datasets with fewer parameters and higher time efﬁciency than previous state-of-the-art method.</p>
 				</div>
 				<br><br>
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">System structure</a>
+				<a id="System" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">System structure</a>
 				<div class="">
-					<center><img src="../images/research/paper4/2.png" alt="" style="width:100%;"></center>
+					<center><img src="../information/research/paper4/2.png" alt="" style="width:100%;"></center>
 				</div>
 				<br><br>
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Performance</a>
+				<a id="Performance" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Performance</a>
 				<div class="">
-					<center><img src="../images/research/paper4/3.png" alt="" style="width:100%;"></center>
+					<center><img src="../information/research/paper4/3.png" alt="" style="width:100%;"></center>
 				</div>
 				<br><br>
 
-				<a href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Paper Link</a>
+				<a id="Paper" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Paper Link</a>
 					<span> <p><a href="#">arXiv</a></p>     <p><a href="#">Github</a></p></span>
 			</div>
 		</div>
@@ -153,7 +178,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- copyright -->
 	<div class="copy_right">
-		<p class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
+		<p id="copyright" class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
 	</div>
 	<!-- //copyright -->
 	<!-- move top icon -->
@@ -161,5 +186,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //move top icon -->
 
 </body>
+
+<script>
+    getCookie()
+</script>
 
 </html>

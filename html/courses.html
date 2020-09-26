@@ -3,6 +3,27 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
+<script src='./js/language.js'></script>
+<script>
+    function changeContent(){
+        title=document.getElementById("title")
+        content1=document.getElementById("content1")
+        course1_name=document.getElementById("course1_name")
+        course2_name=document.getElementById("course2_name")
+        if (title.innerHTML.match('深圳')){
+            content1.innerHTML="课程"
+            course1_name.innerHTML="计算机视觉(春季学期)"
+            course2_name.innerHTML="大数据机器学习(秋季学期)"
+        }
+        else if(title.innerHTML.match('SIGS')){
+            content1.innerHTML="Courses"
+            course1_name.innerHTML="Computer Vision (spring semester)"
+            course2_name.innerHTML="Big Data Machine Learning (fall semester)"
+        }
+    }
+
+</script> 
+
 <head>
     <title>SIGS CV LAB</title>
 	<!-- Meta tag Keywords -->
@@ -55,7 +76,7 @@
                 <div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
                     <!-- logo -->
                     <div id="logo">
-                        <h1><a href="index.html">SIGS CV LAB</a></h1>
+                        <h1><a id="title" href="index.html" style="font-size: 50px;">SIGS CV & ML LAB</a></h1>
                     </div>
                     <!-- //logo -->
                     <!-- nav -->
@@ -64,12 +85,13 @@
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="./professor.html">Professor</a></li>
-								<li><a href="./research.html">Research</a></li>
-								<li><a href="./teammates.html">Teammates</a></li>
-								<li><a href="./courses.html">Courses</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a onclick="setCookie()" id="Home" href="index.html">Home</a></li>
+								<li><a onclick="setCookie()" id="Professor" href="./professor.html">Professor</a></li>
+								<li><a onclick="setCookie()" id="Research" href="./research.html">Research</a></li>
+								<li><a onclick="setCookie()" id="Members" href="./members.html">Members</a></li>
+								<li><a onclick="setCookie()" id="Courses" href="./courses.html" class="active">Courses</a></li>
+								<li><a onclick="setCookie()" id="Contact" href="contact.html">Contact Us</a></li>
+								<li><button id="Language" type="button" onclick="changeLanguage()">中文</button></li>
 							</ul>
 						</nav>
                     </div>
@@ -84,12 +106,12 @@
 
     <section class="faq py-5" id="faq">
         <div class="container py-xl-5 py-lg-3">
-            <h3 class="title text-center text-bl mb-5">Courses</h3>
+            <h3 id="content1" class="title text-center text-bl mb-5">Courses</h3>
             <!-- accordions -->
             <ul class="accordion css-accordion mt-5">
                 <li class="accordion-item">
                     <input class="accordion-item-input" type="checkbox" name="accordion" id="course1" />
-                    <label for="course1" class="accordion-item-hd">Computer Vision (spring semester)<span
+                    <label id="course1_name" for="course1" class="accordion-item-hd">Computer Vision (spring semester)<span
                          class="accordion-item-hd-cta">&#9650;</span></label>
                     <div class="accordion-item-bd">
                         <h6 class="accordion-textm">
@@ -102,7 +124,7 @@
 
                 <li class="accordion-item">
                     <input class="accordion-item-input" type="checkbox" name="accordion" id="course2" />
-                    <label for="course2" class="accordion-item-hd">Big Data Machine Learning (fall semester)<span
+                    <label id="course2_name" for="course2" class="accordion-item-hd">Big Data Machine Learning (fall semester)<span
                          class="accordion-item-hd-cta">&#9650;</span></label>
                     <div class="accordion-item-bd">
                         <h6 class="accordion-textm">
@@ -116,14 +138,11 @@
             </ul>
             <!-- //accordions -->
         </div>
-    </section>
-
-
-
+    </section> 
 
     <!-- copyright -->
     <div class="copy_right">
-		<p class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
+		<p id="copyright" class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
 	</div>
     <!-- //copyright -->
     <!-- move top icon -->
@@ -131,5 +150,9 @@
     <!-- //move top icon -->
 
 </body>
+
+<script>
+    getCookie()
+</script>
 
 </html>

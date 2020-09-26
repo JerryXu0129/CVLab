@@ -8,6 +8,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 
+<script src='./js/language.js'></script>
+<script>
+	function changeContent(){	
+		title=document.getElementById("title")
+		content1=document.getElementById("content1")
+		content2=document.getElementById("content2")
+		content3=document.getElementById("content3")		
+		if (title.innerHTML.match('深圳')){
+			content1.innerHTML="计算机视觉与机器学习实验室"
+			content2.innerHTML="计算机视觉与机器学习组隶属于清华大学深圳国际研究生院。<br/>我们的研究针对基于机器学习的视觉任务。"
+			content3.innerHTML="祝你在南国清华拥有愉快的生活！"
+		}
+		else if(title.innerHTML.match('SIGS')){
+			content1.innerHTML="Computer Vision & Machine Learning Lab"
+			content2.innerHTML="The Computer Vision & Machine Learning Group is affiliated to Tsinghua Shenzhen International Graduate School. Our researches focus on vision tasks based on Machine Learning."
+			content3.innerHTML="Wish you a happy staying at Tsinghua, Shenzhen !"
+		}
+	}
+	
+</script> 
+
 <head>
 	<title>SIGS CV LAB</title>
 	<!-- Meta tag Keywords -->
@@ -50,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
 					<!-- logo -->
 					<div id="logo">
-						<h1><a href="index.html">SIGS CV LAB</a></h1>
+						<h1><a id="title" href="index.html" style="font-size: 50px;">SIGS CV & ML LAB</a></h1>
 					</div>
 					<!-- //logo -->
 					<!-- nav -->
@@ -59,12 +80,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="./professor.html">Professor</a></li>
-								<li><a href="./research.html">Research</a></li>
-								<li><a href="./teammates.html">Teammates</a></li>
-								<li><a href="./courses.html">Courses</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
+								<li><a onclick="setCookie()" id="Home" href="index.html" class="active">Home</a></li>
+								<li><a onclick="setCookie()" id="Professor" href="./professor.html">Professor</a></li>
+								<li><a onclick="setCookie()" id="Research" href="./research.html">Research</a></li>
+								<li><a onclick="setCookie()" id="Members" href="./members.html">Members</a></li>
+								<li><a onclick="setCookie()" id="Courses" href="./courses.html">Courses</a></li>
+								<li><a onclick="setCookie()" id="Contact" href="contact.html">Contact Us</a></li>
+								<li><button id="Language" type="button" onclick="changeLanguage()">中文</button></li>
 							</ul>
 						</nav>
 					</div>
@@ -78,19 +100,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="banner_w3lspvt">
 			<div class="container">
 				<div class="w3ls_banner_txt text-center">
-					<h3 class="w3ls_pvt-title text-wh text-uppercase let">Computer Vision Lab</h3>
-					<p class="text-sty-banner">The Computer Vision & Machine Learning Group is in Department of Computer Science and Technology, Tsinghua University. Our researches focus on vision task based on Deep Learning. </p><br>
-					<p class="text-sty-banner">Wish you a happy staying at Tsinghua, Shenzhen !</p>
+					<h3 id="content1" class="w3ls_pvt-title text-wh text-uppercase let">Computer Vision & Machine Learning Lab</h3>
+					<p id="content2" class="text-sty-banner">The Computer Vision & Machine Learning Group is affiliated to Tsinghua Shenzhen International Graduate School. Our researches focus on vision tasks based on Machine Learning. </p><br>
+					<p id="content3" class="text-sty-banner">Wish you a happy staying at Tsinghua, Shenzhen !</p>
 				</div>
 			</div>
 		</div>
+		<!-- <img src="./images/SIGS.png"/> -->
 		<!-- //banner -->
 	</div>
 	<!-- //main banner -->
 
 	<!-- copyright -->
 	<div class="copy_right">
-		<p class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Design by Benjamin Zhang.</p>
+		<p id="copyright" class="text-center text-wh py-sm-3 py-3">© 2020. All rights reserved | Designed by Benjamin Zhang.</p>
 	</div>
 	<!-- //copyright -->
 	<!-- move top icon -->
@@ -98,5 +121,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //move top icon -->
 
 </body>
+
+<script>
+	getCookie()
+</script> 
 
 </html>
