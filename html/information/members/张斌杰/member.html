@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="zxx">
 
-<script src='./js/language.js'></script>
+<script src='../../../js/language.js'></script>
 <script>
 	function changeContent(){
         Name=document.getElementById("Name")
@@ -16,15 +16,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         content0=document.getElementById("content0")
         Papers=document.getElementById("Papers")
 		if (title.innerHTML.match('深圳')){
-            Name.innerHTML="徐呈寅"
+            Name.innerHTML="张斌杰"
             Experience.innerHTML="在校教育经历"
-            content0.innerHTML="徐呈寅同学于2020年9月起攻读清华大学深圳国际研究生院硕士学位至今。"
+            content0.innerHTML="张斌杰同学于2019年9月起攻读清华大学深圳国际研究生院硕士学位至今。"
             Papers.innerHTML="发表论文"
 		}
 		else if(title.innerHTML.match('SIGS')){
-            Name.innerHTML="Chengyin Xu"
+            Name.innerHTML="Binjie Zhang"
             Experience.innerHTML="Education Experience in SIGS"
-            content0.innerHTML="Xu Chengyin has been studying for his master's degree from Shenzhen International Graduate School of Tsinghua University since September 2020."
+            content0.innerHTML="Binjie Zhang has been studying for his master's degree from Shenzhen International Graduate School of Tsinghua University since September 2019."
             Papers.innerHTML="Published Papers"
 		}
 	}
@@ -48,14 +48,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="../../../css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link href="css/single.css" rel='stylesheet' type='text/css' />
+	<link href="../../../css/single.css" rel='stylesheet' type='text/css' />
 	<!-- single page -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../../../css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/timelines.css" rel="stylesheet">
+	<link href="../../../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../../css/timelines.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -91,12 +91,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a onclick="setCookie()" id="Home" href="index.html">Home</a></li>
-								<li><a onclick="setCookie()" id="Professor" href="./professor.html" class="active">Professor</a></li>
-								<li><a onclick="setCookie()" id="Research" href="./research.html">Research</a></li>
-								<li><a onclick="setCookie()" id="Members" href="./members.html">Members</a></li>
-								<li><a onclick="setCookie()" id="Courses" href="./courses.html">Courses</a></li>
-								<li><a onclick="setCookie()" id="Contact" href="contact.html">Contact Us</a></li>
+								<li><a onclick="setCookie()" id="Home" href="../../../index.html">Home</a></li>
+								<li><a onclick="setCookie()" id="Professor" href="../../../professor.html">Professor</a></li>
+								<li><a onclick="setCookie()" id="Research" href="../../../research.html">Research</a></li>
+								<li><a onclick="setCookie()" id="Members" href="../../../members.html" class="active">Members</a></li>
+								<li><a onclick="setCookie()" id="Courses" href="../../../courses.html">Courses</a></li>
+								<li><a onclick="setCookie()" id="Contact" href="../../../contact.html">Contact Us</a></li>
 								<li><button id="Language" type="button" onclick="changeLanguage()">中文</button></li>
 							</ul>
 						</nav>
@@ -117,17 +117,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="blog_section px-lg-5">
                 <div class="col-md-6">
                     <div class="card border-0">
-                        <a href="javascript:void(0)" align="center">
-                            <img src="./photo.png" alt="" class="img-fluid">
+                        <a href="javascript:void(0)" style="text-align: center;">
+                            <img src="./photo.png" height="200px">
                         </a>
                     </div>
-                </div>
-
-                <h4 id="Name" class="title text-center text-bl mb-5 pb-xl-3">Chengyin Xu</h4>
+				</div>
+				<br><br><br>
+                <h4 id="Name" class="title text-center text-bl mb-5 pb-xl-3">Binjie Zhang</h4>
 
 				<br><hr><br>
 				<a id="Experience" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Education Experience in SIGS</a>
-				<p id="content0">Xu Chengyin has been studying for his master's degree from Shenzhen International Graduate School of Tsinghua University since September 2020.</p>
+				<p id="content0">Binjie Zhang has been studying for his master's degree from Shenzhen International Graduate School of Tsinghua University since September 2019.</p>
 
 				<br><hr><br>
 				<a id="Papers" href="javascript:void(0)" class="text-bl blog-grid-title mt-4 mb-3">Published Papers</a>
